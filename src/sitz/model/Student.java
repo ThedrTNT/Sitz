@@ -1,12 +1,11 @@
 package sitz.model;
 
 import javafx.beans.property.*;
-import javafx.scene.control.CheckBox;
 import sitz.util.DateUtil;
 
 import java.time.LocalDate;
 
-public class Student
+public class Student implements Person
 {
     private StringProperty firstName;
     private StringProperty lastName;

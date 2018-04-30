@@ -77,7 +77,6 @@ public class HomeScreenController
 
     public void handleRandomizeButton()
     {
-        //to be implemented
         Stack<Integer> seatNumbers = new Stack<Integer>();
         for (int i = 0; i < mainApp.getStudentData().size(); i++)
         {
@@ -109,7 +108,7 @@ public class HomeScreenController
         {
             if(student.isChecked())
             {
-                studentNames.add(student.getSeatNumber() + ": " + student.getFirstName() + " " + student.getLastName());
+                studentNames.add("Seat " + student.getSeatNumber() + ": " + student.getFirstName() + " " + student.getLastName());
             }
         }
         studentList.setItems(studentNames);
@@ -123,7 +122,7 @@ public class HomeScreenController
         {
             if(student.isChecked())
             {
-                studentNames.add(student.getSeatNumber() + ": " + student.getFirstName() + " " + student.getLastName());
+                studentNames.add("Seat " + student.getSeatNumber() + ": " + student.getFirstName() + " " + student.getLastName());
             }
         }
         studentList.setItems(studentNames);

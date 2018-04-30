@@ -19,6 +19,7 @@ import sitz.view.StudentOverviewController;
 
 public class MainApp extends Application {
 
+
     private Stage primaryStage;
     private BorderPane rootLayout;
 
