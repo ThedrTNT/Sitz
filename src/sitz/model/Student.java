@@ -2,7 +2,9 @@ package sitz.model;
 
 import javafx.beans.property.*;
 import sitz.util.DateUtil;
+import sitz.util.LocalDateAdapter;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 public class Student implements Person
@@ -58,6 +60,7 @@ public class Student implements Person
         return lastName;
     }
 
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getBirthday() {
         return birthday.get();
     }

@@ -7,19 +7,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.util.Callback;
 import sitz.MainApp;
 import sitz.model.Student;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class HomeScreenController
 {
@@ -91,9 +85,30 @@ public class HomeScreenController
         }
 
         showSelectedStudents();
+    }
 
+    public void handlePickStudentButton()
+    {
+        Queue<Student> studentQueue = new LinkedList<>();
+        List<Student> randomStudents = new ArrayList<>();
+        for(int i = 0; i < mainApp.getStudentData().size(); i++)
+        {
+            randomStudents.add(mainApp.getStudentData().get(i));
+        }
+        Collections.shuffle(randomStudents);
+        for(int i = 0; i < mainApp.getStudentData().size(); i++)
+        {
+            if(randomStudents.get(i).isChecked()) {
+                studentQueue.add(randomStudents.get(i));
+            }
+        }
+        Student student = studentQueue.remove();
+        String studentName = student.getFirstName() + " " + student.getLastName();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Selected Student");
+        alert.setHeaderText(studentName);
 
-
+        alert.showAndWait();
     }
 
     public void setMainApp(MainApp mainApp) {

@@ -24,10 +24,11 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
-                  <ButtonBar buttonMinWidth="115.0" layoutX="3.0" layoutY="448.4" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                  <ButtonBar buttonMinWidth="80.0" layoutX="3.0" layoutY="448.4" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                     <buttons>
                       <Button mnemonicParsing="false" onAction="#handleRandomizeButton" text="Randomize" ButtonBar.buttonData="LEFT" />
                         <Button mnemonicParsing="false" onAction="#showSelectedStudents" text="Apply" ButtonBar.buttonData="LEFT" />
+                        <Button mnemonicParsing="false" onAction="#handlePickStudentButton" text="Pick Student" ButtonBar.buttonData="LEFT" />
                     </buttons>
                   </ButtonBar>
                </children>

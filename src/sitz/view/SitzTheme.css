@@ -1,0 +1,9 @@
+.background{
+    -fx-background-color: slategray;
+}
+
+.label{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: black;
+}

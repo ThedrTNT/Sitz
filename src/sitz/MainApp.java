@@ -1,21 +1,29 @@
 package sitz;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.prefs.Preferences;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sitz.model.Student;
+import sitz.model.StudentDataWrapper;
 import sitz.view.HomeScreenController;
 import sitz.view.RootMenuController;
 import sitz.view.StudentEditScreenController;
 import sitz.view.StudentOverviewController;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 public class MainApp extends Application {
 
@@ -65,6 +73,11 @@ public class MainApp extends Application {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        File file = getClassroomFilePath();
+        if(file != null)
+        {
+            loadStudentDataFromFile(file);
         }
     }
 
@@ -163,9 +176,84 @@ public class MainApp extends Application {
         primaryStage.close();
     }
 
-
-    public void setStudentData(ObservableList<Student> list)
+    public File getClassroomFilePath()
     {
-        this.studentData = list;
+        Preferences prefs = Preferences.userNodeForPackage(MainApp.class);
+        String filePath = prefs.get("filePath", null);
+        if(filePath != null)
+        {
+            return new File(filePath);
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public void setClassroomFilePath(File file)
+    {
+        Preferences prefs = Preferences.userNodeForPackage(MainApp.class);
+        if(file != null)
+        {
+            prefs.put("filePath", file.getPath());
+
+            primaryStage.setTitle("Sitz - " + file.getName());
+        }
+        else
+        {
+            prefs.remove("filePath");
+            primaryStage.setTitle("Sitz");
+        }
+    }
+
+    public void loadStudentDataFromFile(File file)
+    {
+        try
+        {
+            JAXBContext context = JAXBContext.newInstance(StudentDataWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+
+            StudentDataWrapper wrapper = (StudentDataWrapper) unmarshaller.unmarshal(file);
+
+            studentData.clear();
+            studentData.addAll(wrapper.getStudents());
+
+            setClassroomFilePath(file);
+        }
+        catch(Exception e)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("File Error");
+            alert.setHeaderText("Could not load data");
+            alert.setContentText("Could not load the data from the file:\n" + file.getPath());
+
+            alert.showAndWait();
+        }
+    }
+
+    public void saveStudentDataToFile(File file)
+    {
+        try
+        {
+            JAXBContext context = JAXBContext.newInstance(StudentDataWrapper.class);
+            Marshaller marshaller = context.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            StudentDataWrapper wrapper = new StudentDataWrapper();
+            wrapper.setStudents(studentData);
+
+            marshaller.marshal(wrapper, file);
+
+            setClassroomFilePath(file);
+        }
+        catch(Exception e)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("File Error");
+            alert.setHeaderText("Could not save data");
+            alert.setContentText("Could not save the data to the file:\n" + file.getPath());
+
+            alert.showAndWait();
+        }
     }
 }
