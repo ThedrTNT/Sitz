@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="background" stylesheets="@SitzTheme.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane layoutX="159.0" layoutY="72.0" prefHeight="150.0" prefWidth="200.0" styleClass="menu-bar" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <ButtonBar buttonMinWidth="50.0" layoutX="200.0" layoutY="525.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+        <buttons>
+          <Button mnemonicParsing="false" text="Add Table" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" text="Add Seat" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" text="Remove Object" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" text="Apply" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" text="Cancel" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

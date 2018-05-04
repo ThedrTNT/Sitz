@@ -7,3 +7,7 @@
     -fx-font-family: "Comic Sans MS";
     -fx-text-fill: black;
 }
+
+.menu-bar{
+    -fx-background-color: derive(slategray, 20%);
+}
