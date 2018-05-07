@@ -118,22 +118,25 @@ public class HomeScreenController
         studentTable.setItems(mainApp.getStudentData());
 
         //List is a temporary way to display names and seats. Will add a better visual if time allows.
-        ObservableList<String> studentNames = FXCollections.observableArrayList();
-        for(Student student : mainApp.getStudentData())
-        {
-            if(student.isChecked())
-            {
-                studentNames.add("Seat " + student.getSeatNumber() + ": " + student.getFirstName() + " " + student.getLastName());
-            }
-        }
-        studentList.setItems(studentNames);
+        showSelectedStudents();
     }
 
     public void showSelectedStudents()
     {
         //List is a temporary way to display names and seats. Will add a better visual if time allows.
         ObservableList<String> studentNames = FXCollections.observableArrayList();
+        List<Student> studentSeats = new LinkedList<Student>();
         for(Student student : mainApp.getStudentData())
+        {
+            studentSeats.add(student);
+        }
+        Collections.sort(studentSeats, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return Double.compare(o1.getSeatNumber(), o2.getSeatNumber());
+            }
+        });
+        for(Student student : studentSeats)
         {
             if(student.isChecked())
             {

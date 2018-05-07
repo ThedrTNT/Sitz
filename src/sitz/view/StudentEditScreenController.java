@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sitz.MainApp;
 import sitz.model.Student;
 import sitz.util.DateUtil;
 
@@ -25,6 +26,7 @@ public class StudentEditScreenController
 
     private Stage editStage;
     private Student student;
+    private MainApp mainApp;
     private boolean okClicked = false;
 
     public StudentEditScreenController()
@@ -62,7 +64,7 @@ public class StudentEditScreenController
 
     public void applyOk()
     {
-        if(true)
+        if(isInputValid())
         {
             student.setFirstName(firstNameField.getText());
             student.setLastName(lastNameField.getText());
@@ -106,7 +108,14 @@ public class StudentEditScreenController
             errorMessage += "No valid seat!\n";
         } else {
             try {
-                Integer.parseInt(seatNumberField.getText());
+                int test = Integer.parseInt(seatNumberField.getText());
+                for(Student student : mainApp.getStudentData())
+                {
+                    if(student.getSeatNumber() == test)
+                    {
+                        errorMessage += "That seat is already assigned!\n";
+                    }
+                }
             } catch (NumberFormatException e) {
                 errorMessage += "No valid seat! Must be an integer!";
             }
@@ -135,6 +144,10 @@ public class StudentEditScreenController
             return false;
 
         }
+    }
+
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
     }
 
 

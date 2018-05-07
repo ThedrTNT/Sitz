@@ -11,3 +11,11 @@
 .menu-bar{
     -fx-background-color: derive(slategray, 20%);
 }
+
+.table-view .table-cell{
+    -fx-font-family: "Comic Sans MS";
+}
+
+.list-view .list-cell{
+    -fx-font-family: "Comic Sans MS";
+}

@@ -45,7 +45,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Sitz");
+        this.primaryStage.setTitle("Seating Simulator 9000 2k19 aka Sitz");
 
         initRootLayout();
 
@@ -117,6 +117,7 @@ public class MainApp extends Application {
             // Give the controller access to the main app.
             HomeScreenController controller = loader.getController();
             controller.setMainApp(this);
+            controller.showSelectedStudents();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -142,6 +143,7 @@ public class MainApp extends Application {
             // Set the person into the controller.
             StudentEditScreenController controller = loader.getController();
             controller.setEditStage(editStage);
+            controller.setMainApp(this);
             controller.setStudent(student);
 
             // Show the dialog and wait until the user closes it
