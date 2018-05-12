@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Cooper</firstName>
+        <grade>11</grade>
+        <lastName>Ward</lastName>
+        <seatNumber>1</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Andrew</firstName>
+        <grade>12</grade>
+        <lastName>Ragland</lastName>
+        <seatNumber>4</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Ryan</firstName>
+        <grade>12</grade>
+        <lastName>Parker</lastName>
+        <seatNumber>5</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Joey</firstName>
+        <grade>11</grade>
+        <lastName>JerkoffmAN</lastName>
+        <seatNumber>13</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Sree</firstName>
+        <grade>3</grade>
+        <lastName>GAYDHE</lastName>
+        <seatNumber>120</seatNumber>
+    </student>
+</students>

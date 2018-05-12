@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Xooper</firstName>
+        <grade>11</grade>
+        <lastName>Ward</lastName>
+        <seatNumber>42</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Caitlin</firstName>
+        <grade>12</grade>
+        <lastName>Lien</lastName>
+        <seatNumber>1</seatNumber>
+    </student>
+</students>

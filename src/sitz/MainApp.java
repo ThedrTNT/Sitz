@@ -46,7 +46,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.getIcons().add(new Image("file:eaglescouticon.png"));
+        this.primaryStage.getIcons().add(new Image("file:sitzicon.png"));
         this.primaryStage.setTitle("Sitz: The Interactive Seating Experience");
 
         initRootLayout();
