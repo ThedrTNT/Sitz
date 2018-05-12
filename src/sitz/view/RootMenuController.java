@@ -32,27 +32,39 @@ public class RootMenuController
 
     public void handleNewButton()
     {
-        //Clears observable list of students and whatever we use to store the file it is saved in
-        mainApp.getStudentData().clear();
-        mainApp.setClassroomFilePath(null);
-        mainApp.showHomeScreen();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to create a new file without saving?");
+        alert.initOwner(mainApp.getPrimaryStage());
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.isPresent() && result.get() == ButtonType.OK) {
+
+            //Clears observable list of students and whatever we use to store the file it is saved in
+
+            mainApp.getStudentData().clear();
+            mainApp.setClassroomFilePath(null);
+            mainApp.showHomeScreen();
+        }
     }
 
     public void handleOpenButton()
     {
-        //Open a file browser for user to select classroom to import
-        //Assign file path to an instance variable to pass to a file reader to import the data
-        FileChooser fileChooser = new FileChooser();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to open a different file without saving?");
+        alert.initOwner(mainApp.getPrimaryStage());
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.isPresent() && result.get() == ButtonType.OK) {
+            //Open a file browser for user to select classroom to import
+            //Assign file path to an instance variable to pass to a file reader to import the data
+            FileChooser fileChooser = new FileChooser();
 
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
 
-        File file = fileChooser.showOpenDialog(mainApp.getPrimaryStage());
+            File file = fileChooser.showOpenDialog(mainApp.getPrimaryStage());
 
-        if(file != null)
-        {
-            mainApp.loadStudentDataFromFile(file);
+            if(file != null)
+            {
+                mainApp.loadStudentDataFromFile(file);
+            }
+            mainApp.showHomeScreen();
         }
-        mainApp.showHomeScreen();
     }
 
     public void handleSaveButton()

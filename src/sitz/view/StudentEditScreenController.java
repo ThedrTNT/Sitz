@@ -98,7 +98,11 @@ public class StudentEditScreenController
             errorMessage += "No valid grade!\n";
         } else {
             try {
-                Integer.parseInt(gradeField.getText());
+                int test = Integer.parseInt(gradeField.getText());
+                if(test < 0)
+                {
+                    errorMessage += "Grade must be positive!\n";
+                }
             } catch (NumberFormatException e) {
                 errorMessage += "No valid grade! Must be an integer!";
             }
@@ -111,10 +115,14 @@ public class StudentEditScreenController
                 int test = Integer.parseInt(seatNumberField.getText());
                 for(Student student : mainApp.getStudentData())
                 {
-                    if(student.getSeatNumber() == test)
+                    if(student.getSeatNumber() == test && student != this.student)
                     {
                         errorMessage += "That seat is already assigned!\n";
                     }
+                }
+                if(test < 0)
+                {
+                    errorMessage += "No negative seat numbers!\n";
                 }
             } catch (NumberFormatException e) {
                 errorMessage += "No valid seat! Must be an integer!";

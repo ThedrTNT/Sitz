@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -45,7 +46,8 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Seating Simulator 9000 2k19 aka Sitz");
+        this.primaryStage.getIcons().add(new Image("file:eaglescouticon.png"));
+        this.primaryStage.setTitle("Sitz: The Interactive Seating Experience");
 
         initRootLayout();
 
@@ -199,12 +201,12 @@ public class MainApp extends Application {
         {
             prefs.put("filePath", file.getPath());
 
-            primaryStage.setTitle("Sitz - " + file.getName());
+            primaryStage.setTitle("Sitz: The Interactive Seating Experience - " + file.getName());
         }
         else
         {
             prefs.remove("filePath");
-            primaryStage.setTitle("Sitz");
+            primaryStage.setTitle("Sitz: The Interactive Seating Experience");
         }
     }
 
