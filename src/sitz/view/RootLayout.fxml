@@ -31,6 +31,12 @@
               <MenuItem mnemonicParsing="false" onAction="#handleCloseButton" text="Close" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSelectAll" text="Select All" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleDeselectAll" text="Deselect All" />
+               </items>
+            </Menu>
           <Menu mnemonicParsing="false" text="View">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#handleHomeButton" text="Home" />

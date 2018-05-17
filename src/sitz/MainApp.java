@@ -136,6 +136,7 @@ public class MainApp extends Application {
 
             // Create the dialog Stage.
             Stage editStage = new Stage();
+            editStage.getIcons().add(new Image("file:sitzicon.png"));
             editStage.setTitle("Edit Person");
             editStage.initModality(Modality.WINDOW_MODAL);
             editStage.initOwner(primaryStage);

@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
 import sitz.MainApp;
+import sitz.model.Student;
 
 import java.io.File;
 import java.util.Optional;
@@ -111,6 +112,24 @@ public class RootMenuController
         if(result.isPresent() && result.get() == ButtonType.OK) {
             mainApp.close();
         }
+    }
+
+    public void handleSelectAll()
+    {
+        for(Student student : mainApp.getStudentData())
+        {
+            student.setChecked(true);
+        }
+        mainApp.showHomeScreen();
+    }
+
+    public void handleDeselectAll()
+    {
+        for(Student student : mainApp.getStudentData())
+        {
+            student.setChecked(false);
+        }
+        mainApp.showHomeScreen();
     }
 
     public void setMainApp(MainApp mainApp)

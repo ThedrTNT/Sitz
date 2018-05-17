@@ -14,7 +14,7 @@
         <firstName>Andrew</firstName>
         <grade>12</grade>
         <lastName>Ragland</lastName>
-        <seatNumber>4</seatNumber>
+        <seatNumber>2</seatNumber>
     </student>
     <student>
         <birthday>1999-01-01</birthday>
@@ -22,22 +22,142 @@
         <firstName>Ryan</firstName>
         <grade>12</grade>
         <lastName>Parker</lastName>
-        <seatNumber>5</seatNumber>
+        <seatNumber>3</seatNumber>
     </student>
     <student>
         <birthday>1999-01-01</birthday>
         <checked>true</checked>
         <firstName>Joey</firstName>
         <grade>11</grade>
-        <lastName>JerkoffmAN</lastName>
-        <seatNumber>13</seatNumber>
+        <lastName>Kurkjian</lastName>
+        <seatNumber>4</seatNumber>
     </student>
     <student>
         <birthday>1999-01-01</birthday>
         <checked>true</checked>
         <firstName>Sree</firstName>
-        <grade>3</grade>
-        <lastName>GAYDHE</lastName>
-        <seatNumber>120</seatNumber>
+        <grade>11</grade>
+        <lastName>Grandhe</lastName>
+        <seatNumber>5</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Zack</firstName>
+        <grade>12</grade>
+        <lastName>Stoebe</lastName>
+        <seatNumber>6</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Isabelle</firstName>
+        <grade>12</grade>
+        <lastName>Scott</lastName>
+        <seatNumber>7</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Marco</firstName>
+        <grade>11</grade>
+        <lastName>Ozello</lastName>
+        <seatNumber>8</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Sebastian</firstName>
+        <grade>12</grade>
+        <lastName>Chirinos</lastName>
+        <seatNumber>9</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Michaela</firstName>
+        <grade>12</grade>
+        <lastName>Matocha</lastName>
+        <seatNumber>10</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Conner</firstName>
+        <grade>11</grade>
+        <lastName>Packebush</lastName>
+        <seatNumber>11</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Trinity</firstName>
+        <grade>12</grade>
+        <lastName>Martinez</lastName>
+        <seatNumber>12</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Emma</firstName>
+        <grade>11</grade>
+        <lastName>Guentzel</lastName>
+        <seatNumber>13</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Hill</firstName>
+        <grade>12</grade>
+        <lastName>Bednarski</lastName>
+        <seatNumber>14</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Leah</firstName>
+        <grade>12</grade>
+        <lastName>Gonzales</lastName>
+        <seatNumber>15</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Sage</firstName>
+        <grade>11</grade>
+        <lastName>Sanford</lastName>
+        <seatNumber>16</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Devyn</firstName>
+        <grade>11</grade>
+        <lastName>Taylor</lastName>
+        <seatNumber>17</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Mikayla</firstName>
+        <grade>12</grade>
+        <lastName>Gray</lastName>
+        <seatNumber>18</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Travis</firstName>
+        <grade>12</grade>
+        <lastName>HerrNeckar</lastName>
+        <seatNumber>19</seatNumber>
+    </student>
+    <student>
+        <birthday>1999-01-01</birthday>
+        <checked>true</checked>
+        <firstName>Erin</firstName>
+        <grade>12</grade>
+        <lastName>Risinger</lastName>
+        <seatNumber>20</seatNumber>
     </student>
 </students>
