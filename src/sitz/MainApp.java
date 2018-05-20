@@ -37,10 +37,10 @@ public class MainApp extends Application {
     public MainApp()
     {
         //This is sample data
-        studentData.add(new Student("May", "Justin", 1));
-        studentData.add(new Student("McCarroll", "David", 15));
-        studentData.add(new Student("Conrad", "Bob", 2));
-        studentData.add(new Student("Ward", "Cooper", 11));
+        studentData.add(new Student("Smith", "John", 1));
+        studentData.add(new Student("Doe", "Jane", 2));
+        studentData.add(new Student("Podunk", "Robert", 3));
+        studentData.add(new Student("Student", "Example", 4));
     }
 
     @Override

@@ -16,7 +16,7 @@
                <children>
                   <TableView fx:id="studentTable" layoutX="14.0" layoutY="67.0" prefHeight="440.0" prefWidth="287.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="checkboxColumn" minWidth="5.0" prefWidth="87.99999850988388" styleClass="table-header" text="Checkbox" />
+                      <TableColumn fx:id="checkboxColumn" minWidth="5.0" prefWidth="87.99999850988388" styleClass="table-header" text="Present?" />
                       <TableColumn fx:id="lastNameColumn" prefWidth="101.59996795654297" styleClass="table-header" text="Last Name" />
                         <TableColumn fx:id="firstNameColumn" prefWidth="75.0" styleClass="table-header" text="First Name" />
                     </columns>
